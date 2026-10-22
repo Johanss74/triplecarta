@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidad · Triple Carta</title>
+<meta name="description" content="Qué hace Triple Carta con los datos de quien comenta o escribe a la cuenta @triplecarta: poco, para lo justo y a la vista.">
+<meta name="color-scheme" content="light dark">
+<style>
+@font-face{font-family:"Spectral";font-weight:400;font-style:normal;font-display:swap;src:url("../fuentes/spectral-latin-400-normal.woff2") format("woff2")}
+@font-face{font-family:"Spectral";font-weight:400;font-style:italic;font-display:swap;src:url("../fuentes/spectral-latin-400-italic.woff2") format("woff2")}
+@font-face{font-family:"Spectral";font-weight:600;font-style:normal;font-display:swap;src:url("../fuentes/spectral-latin-600-normal.woff2") format("woff2")}
+@font-face{font-family:"Manrope";font-weight:500;font-style:normal;font-display:swap;src:url("../fuentes/manrope-latin-500-normal.woff2") format("woff2")}
+@font-face{font-family:"Manrope";font-weight:600;font-style:normal;font-display:swap;src:url("../fuentes/manrope-latin-600-normal.woff2") format("woff2")}
+
+:root{
+  --papel:#F7F5EF; --tinta:#161616; --atenuado:#6B665D; --acento:#8B5A2B; --filete:#DCD5C6; --caja:#EFEADF;
+  --astro:#B39A62; --bazi:#B0381F; --num:#8B5A2B;
+  --serif:"Spectral",Georgia,"Times New Roman",serif; --sans:"Manrope","Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--papel:#12263A;--tinta:#EDE5D3;--atenuado:#A3AEB4;--acento:#C9B07A;--filete:#2E475B;--caja:#183149;--num:#C9A27A}
+}
+:root[data-theme="dark"]{--papel:#12263A;--tinta:#EDE5D3;--atenuado:#A3AEB4;--acento:#C9B07A;--filete:#2E475B;--caja:#183149;--num:#C9A27A}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--tinta);font-family:var(--serif);font-size:1.1875rem;line-height:1.65;
+  font-feature-settings:"kern","liga","onum";-webkit-font-smoothing:antialiased}
+.filete-tres{display:flex;height:4px}
+.filete-tres span{flex:1}
+.filete-tres span:nth-child(1){background:var(--astro)}
+.filete-tres span:nth-child(2){background:var(--bazi)}
+.filete-tres span:nth-child(3){background:var(--num)}
+main{max-width:41rem;margin:0 auto;padding:3.5rem 1.5rem 5rem}
+.marca{display:flex;align-items:center;gap:.6rem;font-family:var(--sans);font-weight:600;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--tinta)}
+.marca i{display:inline-block;width:.42rem;height:.42rem;border-radius:50%}
+.marca i:nth-of-type(1){background:var(--astro)} .marca i:nth-of-type(2){background:var(--bazi)} .marca i:nth-of-type(3){background:var(--num)}
+.marca .puntos{display:inline-flex;gap:.28rem}
+h1{font-weight:600;font-size:clamp(2.3rem,7vw,3.3rem);line-height:1.08;letter-spacing:-.01em;margin:2.6rem 0 .8rem}
+.fecha{font-family:var(--sans);font-size:.8rem;letter-spacing:.06em;color:var(--atenuado);margin:0 0 2.2rem}
+.entrada{font-size:1.32rem;line-height:1.55;font-style:italic;margin:0 0 2.6rem;color:var(--tinta)}
+.resumen{background:var(--caja);border-left:3px solid var(--acento);padding:1.4rem 1.6rem;margin:0 0 3.2rem}
+.etiqueta{font-family:var(--sans);font-weight:600;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--acento);margin:0 0 .7rem}
+.resumen ol{margin:0;padding-left:1.2rem}
+.resumen li{margin:.35rem 0}
+section{border-top:1px solid var(--filete);padding:2.1rem 0 .6rem;display:grid;grid-template-columns:3.2rem 1fr;column-gap:.4rem}
+section > .num{font-family:var(--sans);font-weight:500;font-size:.85rem;letter-spacing:.06em;color:var(--acento);padding-top:.42rem;font-variant-numeric:tabular-nums}
+section > div > *:first-child{margin-top:0}
+h2{font-weight:600;font-size:1.45rem;line-height:1.25;margin:0 0 .8rem}
+p{margin:0 0 1rem}
+ul.lista{margin:0 0 1rem;padding:0;list-style:none}
+ul.lista li{position:relative;padding-left:1.15rem;margin:0 0 .75rem}
+ul.lista li::before{content:"";position:absolute;left:0;top:.72em;width:.45rem;height:1px;background:var(--acento)}
+strong{font-weight:600}
+.nota{border:1px solid var(--filete);padding:1rem 1.2rem;font-size:1.05rem;margin:0 0 1.2rem}
+a{color:var(--tinta);text-decoration-color:var(--acento);text-decoration-thickness:1px;text-underline-offset:.18em}
+a:hover{color:var(--acento)}
+footer{max-width:41rem;margin:0 auto;padding:0 1.5rem 3.5rem;font-family:var(--sans);font-size:.8rem;line-height:1.6;color:var(--atenuado)}
+footer p{border-top:1px solid var(--filete);padding-top:1.4rem;margin:0}
+@media (max-width:560px){
+  body{font-size:1.0625rem}
+  main{padding:2.4rem 1rem 3.5rem}
+  footer{padding:0 1rem 2.5rem}
+  .entrada{font-size:1.18rem}
+  section{grid-template-columns:1fr}
+  section > .num{padding:0 0 .2rem}
+  .resumen{padding:1.1rem 1.1rem}
+}
+</style>
+</head>
+<body>
+<div class="filete-tres" aria-hidden="true"><span></span><span></span><span></span></div>
+<main>
+  <div class="marca"><span class="puntos" aria-hidden="true"><i></i><i></i><i></i></span>Triple Carta</div>
+
+  <h1>Política de privacidad</h1>
+  <p class="fecha">Última actualización: 22 de octubre de 2026</p>
+
+  <p class="entrada">Contamos cómo funcionan la astrología occidental, el BaZi y la numerología. Aquí contamos, con la misma claridad, qué hacemos con tus datos cuando hablas con nosotros: poco, para lo justo y a la vista.</p>
+
+  <div class="resumen">
+    <p class="etiqueta">En tres líneas</p>
+    <ol>
+      <li>Leemos y contestamos los comentarios de nuestras publicaciones de Instagram. Una persona aprueba cada respuesta antes de publicarla.</li>
+      <li>No pedimos ni guardamos fechas, horas ni lugares de nacimiento, y no hacemos lecturas personales en redes.</li>
+      <li>Guardamos los textos completos 90 días como máximo, y puedes pedirnos que los borremos cuando quieras.</li>
+    </ol>
+  </div>
+
+  <section id="responsable">
+    <span class="num">01</span>
+    <div>
+      <h2>Quién es el responsable</h2>
+      <p>Joan García Nieto, creador de Triple Carta. Puedes escribirnos a <a href="mailto:triplecarta@gmail.com">triplecarta@gmail.com</a>.</p>
+      <p>Triple Carta es un proyecto de divulgación sobre astrología occidental, BaZi y numerología, que presentamos como sistemas simbólicos, no como métodos científicos de predicción.</p>
+    </div>
+  </section>
+
+  <section id="alcance">
+    <span class="num">02</span>
+    <div>
+      <h2>A qué se aplica</h2>
+      <p>A la cuenta <strong>@triplecarta</strong> de Instagram; a la aplicación con la que publicamos y gestionamos esa cuenta a través de la API oficial de Instagram, y a los correos que nos envíes.</p>
+    </div>
+  </section>
+
+  <section id="datos">
+    <span class="num">03</span>
+    <div>
+      <h2>Qué datos tratamos y para qué</h2>
+      <ul class="lista">
+        <li><strong>Comentarios en nuestras publicaciones.</strong> Tu nombre de usuario, el texto, la fecha y el hilo en el que escribes. Los usamos para leerlos, contestarte y entender qué interesa a quien nos sigue: preguntas, dudas y temas que pedís.</li>
+        <li><strong>Mensajes privados.</strong> Si nos escribes por privado, los lee y los contesta una persona desde la app de Instagram. Nuestra aplicación no tiene acceso a ellos.</li>
+        <li><strong>Correos.</strong> Tu dirección y lo que nos cuentes, para responderte.</li>
+        <li><strong>Nuestras publicaciones.</strong> La aplicación publica nuestros vídeos y nuestro comentario fijado. Eso no implica datos de otras personas.</li>
+      </ul>
+      <p class="nota">No pedimos fechas, horas ni lugares de nacimiento. Si publicas los tuyos en un comentario, te recomendaremos borrarlos y no los repetiremos; nuestro registro interno no los conserva.</p>
+    </div>
+  </section>
+
+  <section id="ia">
+    <span class="num">04</span>
+    <div>
+      <h2>Inteligencia artificial</h2>
+      <p>Preparamos borradores de respuesta con ayuda de inteligencia artificial. Antes de publicar nada, una persona lee cada respuesta y la aprueba una a una.</p>
+      <p>No tomamos decisiones automatizadas que te afecten ni hacemos perfiles de nadie. Nosotros no usamos tus comentarios para entrenar modelos de inteligencia artificial.</p>
+    </div>
+  </section>
+
+  <section id="base">
+    <span class="num">05</span>
+    <div>
+      <h2>Por qué podemos hacerlo</h2>
+      <p>Por nuestro interés legítimo en atender y moderar las conversaciones de nuestra propia cuenta y en contestar a quien nos escribe (artículo 6.1.f del Reglamento General de Protección de Datos). Puedes oponerte cuando quieras: te contamos cómo más abajo.</p>
+    </div>
+  </section>
+
+  <section id="plazos">
+    <span class="num">06</span>
+    <div>
+      <h2>Cuánto tiempo los guardamos</h2>
+      <ul class="lista">
+        <li><strong>Textos completos de comentarios y borradores de respuesta:</strong> el tiempo necesario para contestar y, como máximo, 90 días. Pasado ese plazo se borran de forma automática.</li>
+        <li><strong>Registro para el análisis:</strong> sin nombres de usuario, fechas ni horas; solo el tipo de mensaje, el tema y un resumen de una línea. Lo conservamos mientras nos sirva para decidir qué explicar.</li>
+        <li><strong>Correos:</strong> mientras haga falta para atenderte.</li>
+      </ul>
+      <p>Lo que publicas en Instagram sigue allí hasta que lo borres tú, según la política de Meta.</p>
+    </div>
+  </section>
+
+  <section id="destinatarios">
+    <span class="num">07</span>
+    <div>
+      <h2>Con quién se comparten</h2>
+      <p>No vendemos ni cedemos tus datos. Instagram (Meta) trata lo que publicas en su plataforma como responsable propio, según su política.</p>
+      <p>Además, nos apoyamos en proveedores que tratan datos por cuenta nuestra y solo para estos fines: el correo, el alojamiento de esta página y servicios de inteligencia artificial que ayudan a preparar los borradores. Algunos están fuera del Espacio Económico Europeo; en ese caso, las transferencias se apoyan en las garantías que exige el Reglamento, como decisiones de adecuación o cláusulas contractuales tipo.</p>
+    </div>
+  </section>
+
+  <section id="derechos">
+    <span class="num">08</span>
+    <div>
+      <h2>Tus derechos</h2>
+      <p>Puedes pedirnos acceso, rectificación, supresión, oposición, limitación del tratamiento y portabilidad de tus datos escribiendo a <a href="mailto:triplecarta@gmail.com">triplecarta@gmail.com</a>.</p>
+      <p>Si crees que no los hemos atendido bien, puedes reclamar ante la <a href="https://www.aepd.es" rel="noopener">Agencia Española de Protección de Datos</a>.</p>
+    </div>
+  </section>
+
+  <section id="borrar">
+    <span class="num">09</span>
+    <div>
+      <h2>Cómo pedir que borremos tus datos</h2>
+      <p>Escribe a <a href="mailto:triplecarta@gmail.com?subject=Borrar%20mis%20datos">triplecarta@gmail.com</a> con el asunto «Borrar mis datos» e indica tu nombre de usuario de Instagram. Borraremos lo que tengamos sobre ti en un plazo máximo de un mes y te lo confirmaremos por correo.</p>
+      <p>Tus comentarios en Instagram puedes borrarlos tú en cualquier momento desde la app.</p>
+    </div>
+  </section>
+
+  <section id="menores">
+    <span class="num">10</span>
+    <div>
+      <h2>Menores</h2>
+      <p>Nuestro contenido se dirige a personas adultas. Si eres menor de edad, no nos envíes datos personales.</p>
+    </div>
+  </section>
+
+  <section id="pagina">
+    <span class="num">11</span>
+    <div>
+      <h2>Esta página y los cambios</h2>
+      <p>Esta página no usa cookies ni herramientas de analítica, y sus tipografías se sirven desde aquí mismo. Está alojada en GitHub Pages, que registra datos técnicos de las visitas según su propia política.</p>
+      <p>Si cambiamos esta política, lo verás en la fecha de arriba.</p>
+    </div>
+  </section>
+</main>
+<footer>
+  <p>Triple Carta · Astrología occidental, BaZi y numerología: sistemas simbólicos, no métodos científicos de predicción.</p>
+</footer>
+</body>
+</html>
